@@ -1,0 +1,25 @@
+<script>
+    //  hello world
+    //  你好世界
+    // 要求：根据需要切换 'msg' 的值
+
+    // 1. 定义msg值的数据源
+    const messages = {
+        en: {
+            msg: 'hello world'
+        },
+        zh: {
+            msg: '你好世界'
+        }
+    }
+    // 2. 定义切换变量
+    let locale = 'zh'
+    // 3. 定义赋值函数
+    function t(key) {
+        return messages[locale][key]
+    }
+    // 4. 为msg赋值
+    let msg = t('msg')
+    console.log(msg);
+
+</script>

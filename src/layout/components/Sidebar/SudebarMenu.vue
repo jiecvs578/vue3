@@ -9,11 +9,11 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { filterRoutes, generateMenus } from '@/utils/router'
+import { filterRouters, generateMenus } from '@/utils/route'
 import SidebarItem from './SidebarItem.vue'
 const router = useRouter()
 const routes = computed(() => {
-    const fRoutes = filterRoutes(router.getRoutes())
+    const fRoutes = filterRouters(router.getRoutes())
     return generateMenus(fRoutes)
 })
 // 默认激活

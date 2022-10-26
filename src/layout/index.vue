@@ -1,11 +1,14 @@
 <template>
     <div class="app-wrapper" :class="[$store.getters.sidebarOpened ? 'openSidebar' : 'hideSidebar']">
         <!-- 左侧menu -->
-        <sidebar class="sidebar-container" :style="{backgroundColor: variables.menuBg}"></sidebar>
+        <sidebar class="sidebar-container" :style="{ backgroundColor: $store.getters.cssVar.menuBg }"></sidebar>
         <div class="main-container">
             <div class="fixed-header">
                 <!-- 顶部navbar -->
                 <Navbar></Navbar>
+                <!-- tags -->
+                <TagsView></TagsView>
+
             </div>
             <!-- 内容区 -->
             <AppMain></AppMain>
@@ -17,7 +20,7 @@ import { } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar'
 import AppMain from './components/AppMain.vue'
-import variables from '@/styles/variables.scss'
+import TagsView from '@/components/TagsView/index.vue'
 </script>
 
 <style lang="scss" scoped>

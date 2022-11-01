@@ -1,5 +1,5 @@
 import { MAIN_COLOR, DEFAULT_COLOR } from '@/constant/index'
-import { getItem, setItem } from '@/utils/storeage'
+import { getItem, setItem } from '@/utils/storage'
 import variables from '@/styles/variables.scss'
 export default {
     namespaced: true,

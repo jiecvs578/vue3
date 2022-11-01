@@ -2,7 +2,7 @@
     <div class="login-container">
         <el-form class="login-form" :model="loginForm" :rules="loginRules" ref="loginFromRef">
             <div class="title-container">
-                <h3 class="title">{{$t('msg.login.title')}}</h3>
+                <h3 class="title">{{ $t('msg.login.title') }}</h3>
                 <lang-select class="lang-select"></lang-select>
             </div>
             <!-- username -->
@@ -28,7 +28,7 @@
             </el-form-item>
             <!-- 登录按钮 -->
             <el-button type="primary" style="width:100%; margin-bottom: 30px" @click="handlerLogin" :loading="loading">
-                {{$t('msg.login.loginBtn')}}</el-button>
+                {{ $t('msg.login.loginBtn') }}</el-button>
 
             <div class="tips" v-html="$t('msg.login.desc')"></div>
         </el-form>
@@ -83,7 +83,6 @@ const store = useStore()
 const loginFromRef = ref(null)
 const handlerLogin = () => {
     // 1.进行表单校验
-    console.log(loginFromRef.value)
     loginFromRef.value.validate(valid => {
         if (!valid) return
         // 2.触发登录动作

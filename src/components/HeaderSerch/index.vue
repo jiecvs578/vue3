@@ -50,8 +50,7 @@ let searchPool = computed(() => {
     const filterRoutes = filterRouters(router.getRoutes())
     return generateRoutes(filterRoutes)
 })
-console.log(searchPool.value)
-console.log(router.getRoutes())
+
 /**
  * 搜索库相关
  */

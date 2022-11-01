@@ -46,9 +46,9 @@ export default {
     themeChange: '主题更换'
   },
   universal: {
+    title: '提示',
     confirm: '确定',
-    cancel: '取消',
-    title: '提示'
+    cancel: '取消'
   },
   navBar: {
     themeChange: '主题修改',

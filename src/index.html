@@ -1,25 +1,30 @@
 <script>
-    //  hello world
-    //  你好世界
-    // 要求：根据需要切换 'msg' 的值
 
-    // 1. 定义msg值的数据源
+    //   我们有一个变量msg，但是这个msg有且只能有两个值:
+    // 1.hello world
+    // 2.你好世界
+
+    // 要求:根据需要切换msg 的值
+
+    //1- 定义msg 值的数据源
     const messages = {
+        //en 对应的是英文状态
         en: {
-            msg: 'hello world'
+            msg: "hello world"
         },
+        //zh 对应的是中文状态
         zh: {
-            msg: '你好世界'
+            msg: "你好世界"
         }
     }
-    // 2. 定义切换变量
-    let locale = 'zh'
-    // 3. 定义赋值函数
+    //2- 定义切换变量
+    let locale = 'en'
+    //3- 定义赋值函数  key对应的就是变量的某个key值
     function t(key) {
         return messages[locale][key]
     }
-    // 4. 为msg赋值
+    //4- 为msg赋值
     let msg = t('msg')
+    //当locale等于en代表英文模式 那么这里打印的是 hello world 如果locale等于zh那么打印你好世界
     console.log(msg);
-
 </script>
